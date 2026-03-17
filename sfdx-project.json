@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "ajTestMP",
+  "namespace": "mirzapur",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "65.0"
+}

@@ -1,0 +1,11 @@
+project:
+  name: ajTestMP
+deploy:
+  output: package_link
+  install_package: false
+  seed_data: false
+  reseed_on_upgrade: false
+  reconfigure_on_upgrade: false
+autofix:
+  max_attempts: 3
+  max_coverage_attempts: 3
