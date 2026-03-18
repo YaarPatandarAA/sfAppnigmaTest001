@@ -128,6 +128,7 @@ public with sharing class AccountService {
     /**
      * Invocable entry point for Flow and Process Builder.
      * Accepts a list of raw phone strings, returns a list of ValidationResult.
+     * Handles null input gracefully by returning an empty list.
      *
      * @param rawPhones  List of raw phone strings to validate
      * @return           List of ValidationResult (one per input, in the same order)
@@ -138,6 +139,9 @@ public with sharing class AccountService {
     )
     public static List<ValidationResult> validatePhoneList(List<String> rawPhones) {
         List<ValidationResult> results = new List<ValidationResult>();
+        if (rawPhones == null) {
+            return results;
+        }
         for (String rawPhone : rawPhones) {
             results.add(validatePhone(rawPhone));
         }
